@@ -3,6 +3,7 @@ import Header from "./components/header/Header";
 import LeftSidebar from "./components/left-sidebar/LeftSidebar";
 import Main from "./components/main/Main";
 import { Routes, Route, Outlet } from "react-router-dom";
+import OverView from "./components/overview/OverView";
 import RightSidebar from "./components/right-sidebar/RightSidebar";
 
 const Layout = () => {
@@ -12,7 +13,7 @@ const Layout = () => {
       <div className="container">
         <LeftSidebar />
         <Main />
-		<RightSidebar />
+        <RightSidebar />
         <Outlet />
       </div>
     </>
@@ -24,6 +25,7 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Layout />} />
+        <Route path="/overview" element={<OverView />} />
       </Routes>
     </>
   );
